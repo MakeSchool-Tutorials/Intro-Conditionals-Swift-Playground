@@ -26,12 +26,26 @@
  - callout(Challenge): Fix the `cruiseControl` function below! It should call the `brake()` function when `distance` is less than fifty, otherwise it should call `accelerate()` _until it reaches 60 mph_.
  
  */
+// Original code
+//func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
+//    // Fix this to implement a basic adaptive cruise control
+//    if currentSpeed < 60 {
+//        accelerate()
+//    }
+//}
+
+// Solution code
 func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
     // Fix this to implement a basic adaptive cruise control
-    if currentSpeed < 60 {
-        accelerate()
+    if distance < 50 {
+        brake()
+    } else {
+        if currentSpeed < 60 {
+            accelerate()
+        }
     }
 }
+
 /*:
  
  - callout(Hint): You are going to need to put a second `if` statement inside of `else`!

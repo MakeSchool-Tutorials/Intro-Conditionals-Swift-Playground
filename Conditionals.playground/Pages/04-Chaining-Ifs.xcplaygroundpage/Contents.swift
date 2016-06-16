@@ -36,10 +36,28 @@
  - callout(Hint): Only brake if the distance between cars is reasonably close -- there is no reason to brake for a car a mile ahead slowing down! Use the difference between `previousDistance` and `distance` to decide how hard to brake. Accelerate only when under the speed limit and the distance between cars is increasing.
 
 */
+
+// Original code
+//func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
+//    // Fix this to implement a basic adaptive cruise control
+//    
+//}
+
+// Solution code -- this is a much more open ended than previous pages
 func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
     // Fix this to implement a basic adaptive cruise control
-    
+    let speedDifference = previousDistance - distance
+    if speedDifference < 0 && currentSpeed < 60 {
+        accelerate()
+    } else if distance < 200 {
+        if speedDifference > 1 {
+            brakeHard()
+        } else if speedDifference > 0 {
+            brake()
+        }
+    }
 }
+
 //: [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.

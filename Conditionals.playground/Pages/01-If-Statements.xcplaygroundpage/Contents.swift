@@ -69,11 +69,20 @@ if 0 > 1 {
  - callout(Challenge): Fix the code below! The speed limit on this road is _60 mph_. Change the code to make the car accelerate up to, but not past _60 mph_!
  
  */
+// Original code
+//func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
+//    if true {
+//        accelerate()
+//    }
+//}
+
+// Solution code
 func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
-    if true {
+    if currentSpeed < 60 {
         accelerate()
     }
 }
+
 /*:
  
  - callout(Hint): The car will increase its speed by _1 mph_ everytime you call `accelerate` but you can only call `accelerate` once per time `cruiseControl` is automatically called.
