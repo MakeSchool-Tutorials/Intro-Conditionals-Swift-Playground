@@ -57,7 +57,7 @@ false || false
  */
 func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
     // Fix this to implement a basic adaptive cruise control
-    if distance < 50 {
+    if distance < 10 {
         brake()
     } else {
         if currentSpeed < 60 {
@@ -76,4 +76,4 @@ func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
 import XCPlayground
 let results = GameScene.setup(.MaintainDistance)
 (results.scene as! GameScene).updateCar = cruiseControl
-XCPlaygroundPage.current
+XCPlaygroundPage.currentPage.liveView = results
