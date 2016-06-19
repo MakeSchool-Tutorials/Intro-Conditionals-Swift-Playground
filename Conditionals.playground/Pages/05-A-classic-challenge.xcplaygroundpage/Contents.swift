@@ -20,9 +20,9 @@
  
  - callout(Challenge): Modify the `for` loop below to...
  
-     - Print _Make_ is the number is divisible by 3
-     - Print _School_ is the number is divisible by 5
-     - Print _Make School_ is the number is divisible by 3 and 5
+     - Print _Make_ if the number is divisible by 3
+     - Print _School_ if the number is divisible by 5
+     - Print _Make School_ if the number is divisible by 3 and 5
      - Otherwise, print the number
  
  */

@@ -3,7 +3,7 @@
  
  # Boolean logic
  
- Sometimes we will want to do something  will want to check two different conditionals at the same time. We could make this work with an `if` statement inside of an `if` statement but that seems like a lot of typing! Especially when we want to do something _if either one of two conditionals are true_.
+ Sometimes we will want to check two different conditionals at the same time. We could make this work with an `if` statement inside of an `if` statement but that seems like a lot of typing! Especially when we want to do something _if either one of two conditionals are true_.
  
  There are three _boolean logic operators_ we will need...
  

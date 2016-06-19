@@ -6,6 +6,5 @@
         <page name='03-Boolean-Logic'/>
         <page name='04-Chaining-Ifs'/>
         <page name='05-A-classic-challenge'/>
-        <page name='06-Extending-the-challenge'/>
     </pages>
 </playground>
