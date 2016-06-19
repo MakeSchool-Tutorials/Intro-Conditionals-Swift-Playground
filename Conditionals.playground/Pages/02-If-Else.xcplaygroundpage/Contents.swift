@@ -1,5 +1,5 @@
-//: [Previous](@previous)
 /*:
+ ![Make School Banner](./swift_banner.png)
  
  # `If` then `else` statements
  
@@ -45,10 +45,10 @@ func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
  Our logic can still use a bit of an improvement! Right now our car is speeding up and braking erratically while the car in front of it maintains a steady speed. We'll try to stablize our _adaptive cruise control_ on the next page so that our car will slow down to a safe following distance and match the speed of the car in front of it.
  
  */
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = GameScene.setup(.MaintainDistance)
 (results.scene as! GameScene).updateCar = cruiseControl
-XCPlaygroundPage.currentPage.liveView = results
+XCPlaygroundPage.current

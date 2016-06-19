@@ -1,5 +1,5 @@
-//: [Previous](@previous)
 /*:
+ ![Make School Banner](./swift_banner.png)
  
  # Boolean logic
  
@@ -70,10 +70,10 @@ func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
  - callout(Hint): You will need to use `distance` and `previousDistance` to solve this!
  
  */
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = GameScene.setup(.MaintainDistance)
 (results.scene as! GameScene).updateCar = cruiseControl
-XCPlaygroundPage.currentPage.liveView = results
+XCPlaygroundPage.current

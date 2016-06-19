@@ -1,5 +1,5 @@
-//: [Previous](@previous)
 /*:
+ ![Make School Banner](./swift_banner.png)
  
 # Chaining Conditionals
  
@@ -40,10 +40,10 @@ func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
     // Fix this to implement a basic adaptive cruise control
     
 }
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = GameScene.setup(.MaintainUntilClear)
 (results.scene as! GameScene).updateCar = cruiseControl
-XCPlaygroundPage.currentPage.liveView = results
+XCPlaygroundPage.current

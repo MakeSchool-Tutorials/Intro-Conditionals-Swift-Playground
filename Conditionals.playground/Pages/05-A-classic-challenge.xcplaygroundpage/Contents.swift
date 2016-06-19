@@ -1,6 +1,5 @@
-//: [Previous](@previous)
 /*:
- 
+ ![Make School Banner](./swift_banner.png)
  # Fizz Buzz
  
  There is a classic childrens game called [Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz) used to teach children division. The rules are simple:
@@ -30,7 +29,7 @@ for i in 1...100 {
     // Implement Make School here!
     
 }
-//: [Next](@next)
+//: [Previous](@previous)
 /*:
  
  - callout(Hint): The logic in the rules might not be in the right order for your `if` statements!
@@ -135,7 +134,4 @@ for i in 1...100 {
      Make
      97
      98
-     Make
-     School
- 
- */
+    
