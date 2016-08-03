@@ -1,30 +1,29 @@
-//: [Previous](@previous)
 /*:
- 
+ ![Make School Banner](./swift_banner.png)
  # Fizz Buzz
- 
+
  There is a classic childrens game called [Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz) used to teach children division. The rules are simple:
- 
+
  - callout(Rules of Fizz Buzz): While counting from 1 to 100...
-         
+
      - If the number is divisible by 3, say _Fizz_
      - If the number is divisible by 5, say _Buzz_
      - If the number is divisible by 3 & 5, say _Fizz Buzz_
      - Otherwise, say the number
- 
+
  The game _Fizz Buzz_ is actually a classic programming problem! We're going to implement a slightly different version here.
- 
+
  ## Make School: a FizzBuzz alternative
- 
+
  Instead of _Fizz_ and _Buzz_, we'll be using _Make_ and _School_.
- 
+
  - callout(Challenge): Modify the `for` loop below to...
- 
-     - Print _Make_ is the number is divisible by 3
-     - Print _School_ is the number is divisible by 5
-     - Print _Make School_ is the number is divisible by 3 and 5
+
+     - Print _Make_ if the number is divisible by 3
+     - Print _School_ if the number is divisible by 5
+     - Print _Make School_ if the number is divisible by 3 and 5
      - Otherwise, print the number
- 
+
  */
 
 // Original code
@@ -47,13 +46,13 @@ for i in 1...100 {
     }
 }
 
-//: [Next](@next)
+//: [Previous](@previous)
 /*:
- 
+
  - callout(Hint): The logic in the rules might not be in the right order for your `if` statements!
- 
+
  ## Your console should display the following:
- 
+
      1
      2
      Make
@@ -154,5 +153,5 @@ for i in 1...100 {
      98
      Make
      School
- 
+
  */

@@ -1,9 +1,9 @@
-//: [Previous](@previous)
 /*:
+ ![Make School Banner](./swift_banner.png)
  
  # Boolean logic
  
- Sometimes we will want to do something  will want to check two different conditionals at the same time. We could make this work with an `if` statement inside of an `if` statement but that seems like a lot of typing! Especially when we want to do something _if either one of two conditionals are true_.
+ Sometimes we will want to check two different conditionals at the same time. We could make this work with an `if` statement inside of an `if` statement but that seems like a lot of typing! Especially when we want to do something _if either one of two conditionals are true_.
  
  There are three _boolean logic operators_ we will need...
  
@@ -85,7 +85,7 @@ func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
  - callout(Hint): You will need to use `distance` and `previousDistance` to solve this!
  
  */
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground

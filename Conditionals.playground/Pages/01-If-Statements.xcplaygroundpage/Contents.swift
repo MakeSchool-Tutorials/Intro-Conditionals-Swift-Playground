@@ -1,5 +1,5 @@
 /*:
- 
+ ![Make School Banner](./swift_banner.png)
  # Conditionals
  
  We'll be talking about _booleans_ and _conditionals_ in this playground. Booleans represent the values of `true` and `false`. _Conditionals_ allow us to use _boolean_ values to decide what code should run!
@@ -29,9 +29,8 @@ let lessThanEqualToExample = 0 <= 0
 let greaterThanEqualToExample = 1 >= 0
 //: - experiment: Try out some _boolean operators_ below!
 
-
-
-
+9 < 10
+10 >= 10
 
 /*:
  
