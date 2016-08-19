@@ -17,7 +17,7 @@ If Statement Chaning
   - Missing "}" to close if statements. Make sure you close the all the if statements, if you are not sure if you are missing one bracket you can put your cursor on left of the breckets then use your arrows to move it to the right, the open bracket that belongs to that one is going to highlight in yellow.
 	  
 A classic Challenge
-  - Remember that you cna use % to get the rreminder from a division.
+  - Remember that you cna use % to get the reminder from a division.
   
   
 ## What you should understand when finished
