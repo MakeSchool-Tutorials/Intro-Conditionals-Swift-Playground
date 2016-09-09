@@ -29,9 +29,8 @@ let lessThanEqualToExample = 0 <= 0
 let greaterThanEqualToExample = 1 >= 0
 //: - experiment: Try out some _boolean operators_ below!
 
-
-
-
+9 < 10
+10 >= 10
 
 /*:
  
@@ -69,8 +68,16 @@ if 0 > 1 {
  - callout(Challenge): Fix the code below! The speed limit on this road is _60 mph_. Change the code to make the car accelerate up to, but not past _60 mph_!
  
  */
-func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
-    if true {
+// Original code
+//func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
+//    if true {
+//        accelerate()
+//    }
+//}
+
+// Solution code
+func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
+    if currentSpeed < 60 {
         accelerate()
     }
 }
