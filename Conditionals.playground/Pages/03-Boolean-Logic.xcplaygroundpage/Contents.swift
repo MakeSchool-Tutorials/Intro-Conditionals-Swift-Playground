@@ -55,7 +55,7 @@ false || false
  - callout(Challenge): Fix the `cruiseControl` function below! It should call the `brake()` function when `distance` is less than fifty. Otherwise, it should call `accelerate()` when it's is under 60 mph and it is slower than the car in front of it.
  
  */
-func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
+func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
     // Fix this to implement a basic adaptive cruise control
     if distance < 10 {
         brake()
@@ -74,6 +74,6 @@ func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
-let results = GameScene.setup(.MaintainDistance)
+let results = GameScene.setup(step: .maintainDistance)
 (results.scene as! GameScene).updateCar = cruiseControl
 XCPlaygroundPage.currentPage.liveView = results

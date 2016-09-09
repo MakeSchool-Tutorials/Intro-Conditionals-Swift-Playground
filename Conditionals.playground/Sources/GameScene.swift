@@ -17,36 +17,36 @@ enum CarColor: String {
 }
 
 enum CarLane {
-    case Left, Middle, Right
+    case left, middle, right
     
-    func position(y: CGFloat) -> CGPoint {
+    func position(_ y: CGFloat) -> CGPoint {
         switch self {
-        case .Left:
+        case .left:
             return CGPoint(x: 65, y: 568+y)
-        case .Middle:
+        case .middle:
             return CGPoint(x: 160, y: 568+y)
-        case .Right:
+        case .right:
             return CGPoint(x: 255, y: 568+y)
         }
     }
 }
 
 public enum PlaygroundStep {
-    case SpeedUp, MaintainDistance, MaintainUntilClear
+    case speedUp, maintainDistance, maintainUntilClear
 }
 
-public class Car: SKSpriteNode {
-    public var carSpeed: Double = 60.0 {
+open class Car: SKSpriteNode {
+    open var carSpeed: Double = 60.0 {
         didSet {
             if carSpeed < 0 { carSpeed = 0 }
         }
     }
     
-    func distanceTo(car: Car) -> Double {
+    func distanceTo(_ car: Car) -> Double {
         return Double(car.position.y - self.position.y - 100) / multiplier
     }
     
-    func updatePosition(dt: Double) {
+    func updatePosition(_ dt: Double) {
         position = CGPoint(x: Double(position.x), y: Double(position.y) + carSpeed * 5 * dt)
     }
 }
@@ -65,9 +65,9 @@ public func accelerate() {
     }
 }
 
-public class GameScene: SKScene, SKPhysicsContactDelegate {
+open class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    public static var car: Car!
+    open static var car: Car!
     var playerCar: Car!
     var otherCar0: Car!
     var otherCar1: Car!
@@ -81,30 +81,30 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
     var distance = 116
     var previousDistance = 116
     var speedLabel: SKLabelNode!
-    public var updateCar: ((Int, Int, Int)->()) = {_,_,_ in
+    open var updateCar: ((Int, Int, Int)->()) = {_,_,_ in
         
     }
     
     var lastTimeInterval: CFTimeInterval = 0.0
     var lastSpeedUpdate: CFTimeInterval = 0.0
     var totalTime: CFTimeInterval = 0.0
-    public static var carChanged = false
-    var step: PlaygroundStep = .SpeedUp
+    open static var carChanged = false
+    var step: PlaygroundStep = .speedUp
     
-    public class func setup(step: PlaygroundStep) -> SKView {
+    open class func setup(step: PlaygroundStep) -> SKView {
         let sceneView = SKView(frame: CGRect(x: 0, y: 0, width: 320, height: 568))
         sceneView.wantsLayer = true
         let scene = GameScene(fileNamed: "GameScene")!
-        scene.scaleMode = .AspectFill
+        scene.scaleMode = .aspectFill
         
         sceneView.presentScene(scene)
         
         switch step {
-        case .SpeedUp:
+        case .speedUp:
             scene.playerCar.carSpeed = 30
-        case .MaintainDistance:
+        case .maintainDistance:
             scene.otherCar1.carSpeed = 50
-        case .MaintainUntilClear:
+        case .maintainUntilClear:
             scene.otherCar1.carSpeed = 0
             scene.otherCar1.position = CGPoint(x: scene.otherCar1.position.x, y: scene.otherCar1.position.y + 200)
         }
@@ -113,22 +113,22 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         return sceneView
     }
     
-    override public func didMoveToView(view: SKView) {
+    override open func didMove(to view: SKView) {
         /* Setup your scene here */
-        roadsNode = childNodeWithName("roadsNode")
-        road0 = roadsNode.childNodeWithName("road0") as! SKSpriteNode
-        road1 = roadsNode.childNodeWithName("road1") as! SKSpriteNode
+        roadsNode = childNode(withName: "roadsNode")
+        road0 = roadsNode.childNode(withName: "road0") as! SKSpriteNode
+        road1 = roadsNode.childNode(withName: "road1") as! SKSpriteNode
         
-        playerCar = roadsNode.childNodeWithName("playerCar") as! Car
+        playerCar = roadsNode.childNode(withName: "playerCar") as! Car
         GameScene.car = playerCar
-        otherCar0 = roadsNode.childNodeWithName("otherCar0") as! Car
-        otherCar1 = roadsNode.childNodeWithName("otherCar1") as! Car
+        otherCar0 = roadsNode.childNode(withName: "otherCar0") as! Car
+        otherCar1 = roadsNode.childNode(withName: "otherCar1") as! Car
         otherCar1.physicsBody = SKPhysicsBody(circleOfRadius: 50, center: CGPoint(x: 0, y: 14))
-        otherCar2 = roadsNode.childNodeWithName("otherCar2") as! Car
+        otherCar2 = roadsNode.childNode(withName: "otherCar2") as! Car
         
-        camera = playerCar.childNodeWithName("camera") as? SKCameraNode
-        distanceLabel = camera?.childNodeWithName("distanceLabel") as! SKLabelNode
-        speedLabel = camera?.childNodeWithName("speedLabel") as! SKLabelNode
+        camera = playerCar.childNode(withName: "camera") as? SKCameraNode
+        distanceLabel = camera?.childNode(withName: "distanceLabel") as! SKLabelNode
+        speedLabel = camera?.childNode(withName: "speedLabel") as! SKLabelNode
         
         cars = [playerCar, otherCar0, otherCar1, otherCar2]
         roads = [road0, road1]
@@ -140,7 +140,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
     }
     
-    public func didBeginContact(contact: SKPhysicsContact) {
+    open func didBegin(_ contact: SKPhysicsContact) {
         distanceLabel.text = "Crashed! :("
         
         if let car0 = contact.bodyA.node as? Car, let car1 = contact.bodyB.node as? Car {
@@ -152,7 +152,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    override public func update(currentTime: CFTimeInterval) {
+    override open func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         if lastTimeInterval == 0 {
             lastTimeInterval = currentTime
@@ -167,11 +167,11 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if !crashed {
             if lastSpeedUpdate > 0.1 {
-                if step == .MaintainUntilClear && otherCar1.carSpeed < 60 && totalTime > 14 {
+                if step == .maintainUntilClear && otherCar1.carSpeed < 60 && totalTime > 14 {
                     otherCar1.carSpeed += 1
-                } else if step == .MaintainUntilClear && otherCar1.carSpeed > 0 && totalTime > 10 {
+                } else if step == .maintainUntilClear && otherCar1.carSpeed > 0 && totalTime > 10 {
                     otherCar1.carSpeed -= 2
-                } else if step == .MaintainUntilClear && otherCar1.carSpeed < 70 && totalTime > 6 {
+                } else if step == .maintainUntilClear && otherCar1.carSpeed < 70 && totalTime > 6 {
                     otherCar1.carSpeed += 1
                 }
                 
@@ -186,7 +186,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         speedLabel.text = "\(Int(playerCar.carSpeed)) mph"
         
         for road in roads {
-            let pos = convertPointToView(road.position)
+            let pos = convertPoint(toView: road.position)
             if pos.y <= -568 {
                 road.position = CGPoint(x: road.position.x, y: road.position.y + 2*567)
             }

@@ -69,7 +69,7 @@ if 0 > 1 {
  - callout(Challenge): Fix the code below! The speed limit on this road is _60 mph_. Change the code to make the car accelerate up to, but not past _60 mph_!
  
  */
-func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
+func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
     if true {
         accelerate()
     }
@@ -85,6 +85,6 @@ func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
-let results = GameScene.setup(.SpeedUp)
+let results = GameScene.setup(step: .speedUp)
 (results.scene as! GameScene).updateCar = cruiseControl
 XCPlaygroundPage.currentPage.liveView = results
