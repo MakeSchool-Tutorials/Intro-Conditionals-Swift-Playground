@@ -73,7 +73,7 @@ func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
 //: [Previous](@previous) | [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
-import XCPlayground
+import PlaygroundSupport
 let results = GameScene.setup(step: .maintainDistance)
 (results.scene as! GameScene).updateCar = cruiseControl
-XCPlaygroundPage.currentPage.liveView = results
+PlaygroundPage.current.liveView = results
