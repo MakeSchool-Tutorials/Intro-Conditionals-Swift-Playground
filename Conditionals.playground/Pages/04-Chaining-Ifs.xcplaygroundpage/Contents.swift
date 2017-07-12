@@ -3,7 +3,7 @@
 
 # Chaining Conditionals
 
- Sometimes we will need to evaluate more than two independent conditionals and run different pieces of code for each of them. We could do this with `if then else` statements nested in other `if then else` statements, but Swift provides a shortcut for this -- `if else`
+ Sometimes we will need to evaluate more than two independent conditionals and run different pieces of code for each of them. We could do this with `if then else` statements nested in other `if then else` statements, but Swift provides a shortcut for this -- `else if`
 
  The following nested `if then else`:
 
