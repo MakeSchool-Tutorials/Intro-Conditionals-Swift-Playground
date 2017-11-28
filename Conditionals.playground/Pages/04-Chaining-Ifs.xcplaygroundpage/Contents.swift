@@ -47,3 +47,4 @@ import PlaygroundSupport
 let results = GameScene.setup(step: .maintainUntilClear)
 (results.scene as! GameScene).updateCar = cruiseControl
 PlaygroundPage.current.liveView = results
+

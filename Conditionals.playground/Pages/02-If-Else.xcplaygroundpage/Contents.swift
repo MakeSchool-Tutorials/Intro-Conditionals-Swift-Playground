@@ -52,3 +52,4 @@ import PlaygroundSupport
 let results = GameScene.setup(step: .maintainDistance)
 (results.scene as! GameScene).updateCar = cruiseControl
 PlaygroundPage.current.liveView = results
+
