@@ -1,23 +1,23 @@
 /*:
  ![Make School Banner](./swift_banner.png)
- # Conditionals
+ # 条件式
  
- We'll be talking about _booleans_ and _conditionals_ in this playground. Booleans represent the values of `true` and `false`. _Conditionals_ allow us to use _boolean_ values to decide what code should run!
+ ここではブーリアンと呼ばれるデータ型と条件式について学びましょう。ブーリアンとは「真」と「偽」の2種類の値を使った表現のことです。これを条件式に当てはめることで、実装させるコードを決めることができます。
  
- We'll be programming an _adaptive cruise control_ system as we learn about _booleans_ and _conditionals_. For those of you who do not drive, _cruise control_ is a feature that maintains the speed of your car. In the past few years, consumer cars have gotten closer and closer to the fabled self driving car. Many new cars have an optional _adaptive cruise control_ feature that not only maintains speed, but uses distance sensors to automatically slow your car down if it is approaching an obstacle!
+ ブーリアンや条件式について学びながら、アダプティブ・クルーズ・コントロール(ACC)システムのプログラミングをやってみましょう。運転しない皆さんにはピンとこないかもしれせんが、クルーズ・コントロールとは車の走行速度を一定に保ってくれる機能のことです。自動運転も現実味をおびてきた近年では、走行速度の制御だけでなく、自動車に付いているセンサがまわりの物体との距離を測り、衝突のないように自動的にスピードを緩めてくれる便利な機能が付いているのです。
  
- ## Bool
+ ## ブーリアン
  
- In Swift, _booleans_ are represented by the `Bool` type. There are two values possible values for a `Bool` -- `true` and `false`. We can use the following _boolean operators_ to evaluate and expression to a boolean:
+ Swiftでは、ブーリアンは’Bool’というテキストで表します。’Bool’においては’true’と’false’の2つの値を使うことができます。次のブール演算子を使ってブール型の演算式を組み立てることができます。
  
- - `<` less than
- - `>` greater than
- - `==` equal to
- - `!=` not equal to
- - `<=` less than or equal to
- - `>=` greater than or equal to
+ - `<` ～より小さい
+ - `>` ～より大きい
+ - `==` ～に等しい
+ - `!=` ～に等しくない
+ - `<=` ～以下
+ - `>=` ～以上
  
- You can see this in action below!
+ 下のデモで実際に見てみましょう!
  
  */
 let lessThanExample = 0 < 1
@@ -27,7 +27,7 @@ let equalToStringExample = "test" == "test"
 let notEqualToExample = "boolean" != "random string"
 let lessThanEqualToExample = 0 <= 0
 let greaterThanEqualToExample = 1 >= 0
-//: - experiment: Try out some _boolean operators_ below!
+//: - 実験: ブール型の機能を試してみましょう！
 
 
 
@@ -35,17 +35,17 @@ let greaterThanEqualToExample = 1 >= 0
 
 /*:
  
- ## `If` statements
+ ## ‘if’を使った文
  
- We can combine `Bool` values with _if statements_ to react to conditions in our code! The code inside of an _if statement_ will only run if the _boolean conditional_ is `true`.
+ ブール値とif文を組み合わせて、特定の条件に反応するようにプログラミングできます。if文でかかれたコードは、ブール値が’true’のときだけ実行します。
  
- An _if statement_ takes the form of:
+ if文は次のような形をとります。
  
     if conditional {
-        // code in here only runs when the conditional is true!
+        // ここに挿入するコードは条件が「真」の時だけ実行されます！
     }
  
- Check out some examples below!
+ いくつか例を見てみましょう。
  
  */
 if 0 < 1 {
@@ -53,20 +53,20 @@ if 0 < 1 {
 }
 
 if 0 > 1 {
-    // this will never run! Swift even warns you about it with the yellow triangle
+    // これは絶対に実行しません！Swiftが黄色の三角形で注意してくれていますね。
     print("Zero is greater than one")
 }
 /*:
  
- Those examples are a bit silly but should demonstrate the point. The code inside _if statements_ will run when the _conditional_ evaluates to `true` and will not run when the _conditional_  evaluates to `false`.
+ ちょっとおかしな例ですが、これで仕組みは理解できるでしょう。if文の中に挿入されたコードは、条件が「真」の時にだけ実行され、条件が「偽」の時には実行されません。
  
- # A basic cruise control
+ # 簡単なクルーズコントロール
  
- Let's put this knowledge to the test and program a basic cruise control system!
+ ここで学んだことを使って簡易的なクルーズ・コントロールシステムを開発してみましょう！
  
- The `cruiseControl` function below gets called automatically a few times a second. It currently will accelerate our car (the blue one) no matter what. The car actually crashes into another car!
+ ‘cruiseControl’の機能は何秒かに1回、自動的に稼働します。このコードでは、青い車はどこまででも加速します。そして他の車に衝突してしまいます。
  
- - callout(Challenge): Fix the code below! The speed limit on this road is _60 mph_. Change the code to make the car accelerate up to, but not past _60 mph_!
+ - callout(Challenge): 次のコードを直してみましょう! 道路の法定速度は時速60km. 60kmまではスピードが出るが、60kmより速くはならないように設定しましょう！
  
  */
 func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
@@ -76,12 +76,20 @@ func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
 }
 /*:
  
- - callout(Hint): The car will increase its speed by _1 mph_ everytime you call `accelerate` but you can only call `accelerate` once per time `cruiseControl` is automatically called.
+ - callout(Hint): `accelerate`と言うたびに時速1kmずつ加速します。でも `accelerate`を発動できるのは `cruiseControl` が自動的に稼働した時に1回だけです。
  
-    You do not need to use `distance` and `previousDistance` right now! We'll be using those in later sections...
+    `distance`と `previousDistance` は今は使いません！後のセクションで使います。
+
  
  */
 //: [Next](@next)
+
+
+
+
+
+
+
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import PlaygroundSupport

@@ -1,48 +1,48 @@
 /*:
  ![Make School Banner](./swift_banner.png)
 
- # `If` then `else` statements
+ # `If`文と `else` 文
 
- You might be wondering how to do something different when the _conditional_ is `false`... Sure, you could try to invert the logic and use a second `if` statement, but there has to be a better way, right?
+ 条件が「偽」の場合に別のコードを実行させることはできるのでしょうか... もちろんロジックを組み変えて、もう一つのif文を使ってコードを書くこともできますが、もっと簡単な方法はないのでしょうか？
 
- ## Enter `else`
+ ## `else`を使う
 
- `If` statements can be paired with a matching `else` statement. The code inside the `if` will run when the _conditional_ is `true` and the code inside the `else` will run when the _conditional_ is `false`. An `if` then `else` statement looks like this:
+ ‘if’文は’else’文とセットで使うことができます。’if’文の中のコードは条件が「真」の時にだけ実行され、一方の’else’文の中のコードは条件が「偽」の時にだけ実行されるのです。実際にはこのように書きます。
 
     if conditional {
-        // code in here only runs when the conditional is true!
+        // ここのコードは条件が「真」の時にだけ実行される!
     } else {
-        // code in here only runs when the conditional is false!
+        // ここのコードは条件が「偽」の時にだけ実行される!
     }
 
- Pretty cool, huh? A lot of code relies on conditional statements. They allow our programs to appear smart!
+ すごいでしょ？条件付きの文を使って書くようなコードはたくさんあります。こうしてスマートなプログラムができるのです。
 
- # A smarter cruise control
+ # スマート・クルーズ・コントロール
 
- Our previous cruise control accelerates to the speed limit no matter what! In this example, there is a car driving under the speed limit and our logic causes a crash :(
+ さっき書いたクルーズコントロールはどんな状況でも加速してしまうものでした。この例では、車は法定速度を守っていながらも衝突してしまいます。
 
  Now that we know about `else` statements, can you turn the _cruise control_ into an _adaptive cruise control_?
 
- - callout(Challenge): Fix the `cruiseControl` function below! It should call the `brake()` function when `distance` is less than fifty, otherwise it should call `accelerate()` _until it reaches 60 mph_.
+ - callout(Challenge): 次の`cruiseControl` 機能を直してみましょう! 今度は距離が50より近い場合には `brake(ブレーキ)`を、その他の場合は時速60kmに到達するまで `accelerate(加速)` をするように書き換えます。
 
  */
 func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
-    // Fix this to implement a basic adaptive cruise control
+    // ここを直してアダプティブ・クルース・コントロールを作りましょう
     if currentSpeed < 60 {
         accelerate()
     }
 }
 /*:
 
- - callout(Hint): You are going to need to put a second `if` statement inside of `else`!
+ - callout(ヒント): `else`文の中に、もう一つ`if`文を入れ込むのです!
 
- ## That works, but it's not very stable...
+ ## それでもいいけど、あまり安定しませんね...
 
- The outcome should look something like this:
+ 完成型はこのようになります:
 
  ![](not_stable.gif)
 
- Our logic can still use a bit of an improvement! Right now our car is speeding up and braking erratically while the car in front of it maintains a steady speed. We'll try to stablize our _adaptive cruise control_ on the next page so that our car will slow down to a safe following distance and match the speed of the car in front of it.
+ ここまで使ったロジックはまだまだ改善できそうです！前の車は安定したスピードを保って走っているのに、私たちの車は急発進と急停止を激しく繰り返しています。ここでは、さっき作ったアダプティブ・クルーズ・コントロールを安定化し、安全な車間距離を保ちながら前の車と同じスピードで走るようにします。
 
  */
 //: [Previous](@previous) | [Next](@next)

@@ -1,15 +1,15 @@
 /*:
  ![Make School Banner](./swift_banner.png)
  
- # Boolean logic
+ # ブーリアンの論理
  
- Sometimes we will want to check two different conditionals at the same time. We could make this work with an `if` statement inside of an `if` statement but that seems like a lot of typing! Especially when we want to do something _if either one of two conditionals are true_.
+ 時には2つの条件式を同時にチェックしたい場合もあります。’if’文のなかに’if’文を重ねる方法もありますが、これではタイプする量が多いですね！1つもしくは2つの条件が「真」の場合にコードを実行したい場合はなおさらです。
  
- There are three _boolean logic operators_ we will need...
+ ブーリアン論理の演算子は3つあります。
  
  ## Not `!`
  
- `!` (not) is used on a single `Bool`. It inverts it! `true` becomes `false` and `false` becomes `true`.
+ ‘!’ (not)は単体の’Bool’に使って「真」と「偽」を入れ替えます。
  
  */
 !true
@@ -18,7 +18,7 @@
  
  ## And `&&`
  
- `&&` (and) is used to combine two `Bool` values into one. The result is `true` when both `Bool` values are `true` and `false` all other times.
+ `&&` (and)を使うと2つの’Bool’を1つにまとめることができます。2つのブール値が両方「真」である時のみ「真」、その他はすべて「偽」となります。
  
  */
 true && true
@@ -29,7 +29,7 @@ false && false
  
  ## Or `||`
  
- `||` (or) is used to combine two `Bool` values into one. The result is `true` when either or both `Bool` values are `true` and `false` when both `values` are `false`.
+ `||` (or) も2つの’Bool’を1つにまとめることができます。少なくともどちらかのブール値が「真」であれば「真」、2つのブール値が両方「偽」の時に「偽」となります。
  
  */
 true || true
@@ -38,25 +38,25 @@ false || true
 false || false
 /*:
  
- - important: In the examples we use raw `true` and `false` values but `!`, `&&`, `||` can all be used with `Bool` variables and conditional statements like `<` and `==`!
+ - 重要: この例では「真」と「偽」の値を直接使いましたが、 `!`, `&&`, `||` はブール変数や、`<`や `==`のような条件付き文でも使えます!
  
- # Improving the logic
+ # ロジックの改善
  
- Our first shot at an _adaptive cruise control_ worked but was pretty unstable. It was not able to match the speed of the car in front of it and looked something like this...
+ アダプティブ・クルーズ・コントロールの1号はなんとか機能したけれど不安定でした。前の車のスピードに合わせる事ができず、こんな具合でした...
  
  ![](not_stable.gif)
  
- We want our _adaptive cruise control_ to behave a bit more like this...
+ 本当はこんな感じにしたいのですが...
  
  ![](stable.gif)
  
- See how it is speeding up and braking erratically while the car in front of it maintains a steady speed. We want it to slow down to a safe following distance and match the speed of the car in front of it.
+ 前の車は一定のスピードで走っているのに、私たちの車は急発進と急停止を繰り返しています。安全な車間距離を保ちながら前の車と同じスピードで走るように書き換えましょう。
  
- - callout(Challenge): Fix the `cruiseControl` function below! It should call the `brake()` function when `distance` is less than fifty. Otherwise, it should call `accelerate()` when it's is under 60 mph and it is slower than the car in front of it.
+ - callout(チャレンジ): 次の`cruiseControl`機能を直してみましょう ！距離が50より近い場合に`brake(ブレーキ)` 機能を発動し、時速60kmより低く、かつ前の車より遅い場合には `accelerate(アクセル)`機能を発動するように書き換えます。
  
  */
 func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
-    // Fix this to implement a basic adaptive cruise control
+    // ここを直してアダプティブ・クルーズ・コントロールを作りましょう
     if distance < 10 {
         brake()
     } else {
@@ -67,7 +67,7 @@ func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
 }
 /*:
  
- - callout(Hint): You will need to use `distance` and `previousDistance` to solve this!
+ - callout(ヒント):  `distance` と `previousDistance`を使ってみよう！
  
  */
 //: [Previous](@previous) | [Next](@next)

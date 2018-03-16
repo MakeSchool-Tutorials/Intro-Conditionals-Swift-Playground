@@ -2,39 +2,39 @@
  ![Make School Banner](./swift_banner.png)
  # Fizz Buzz
 
- There is a classic childrens game called [Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz) used to teach children division. The rules are simple:
+ 子どもに割り算を教える[Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz)とういうゲームがあります。 ルールはいたって簡単です:
 
- - callout(Rules of Fizz Buzz): While counting from 1 to 100...
+ - callout(Fizz Buzzのルール): 1から100まで数えるなかで...
 
-     - If the number is divisible by 3, say _Fizz_
-     - If the number is divisible by 5, say _Buzz_
-     - If the number is divisible by 3 & 5, say _Fizz Buzz_
-     - Otherwise, say the number
+     - 3で割り切れる数字の場合はFizzと言います。
+     - 5で割り切れる数字の場合はBuzzと言います。
+     - 3と5の両方で割り切れる数字の場合はFizz Buzzと言います。
+     - その他の場合は数字をそのまま言います。
 
- The game _Fizz Buzz_ is actually a classic programming problem! We're going to implement a slightly different version here.
+ Fizz Buzzは実はプログラミングと同じなのです！ここでは少しだけ違うバージョンを使います。
 
- ## Make School: a FizzBuzz alternative
+ ## Make School: FizzBuzzの代わりに
 
- Instead of _Fizz_ and _Buzz_, we'll be using _Make_ and _School_.
+ _Fizz_と_Buzz_の代わりに、それぞれ_Make_と_School_を使います。
 
- - callout(Challenge): Modify the `for` loop below to...
+  - callout(チャレンジ): 次の`for`ループを修正して...
 
-     - Print _Make_ if the number is divisible by 3
-     - Print _School_ if the number is divisible by 5
-     - Print _Make School_ if the number is divisible by 3 and 5
-     - Otherwise, print the number
+     - 3で割り切れる数字の場合はMakeと表示します。
+     - 5で割り切れる数字の場合はSchoolと表示します。
+     - 3と5の両方で割り切れる数字の場合はMake Schoolと表示します。
+     - その他の場合は数字をそのまま表示します。
 
  */
 for i in 1...100 {
-    // Implement Make School here!
+    // ここにMake Schoolを書くよ！
 
 }
-//: [Previous](@previous)
+
 /*:
 
- - callout(Hint): The logic in the rules might not be in the right order for your `if` statements!
+  - callout(ヒント):ルールに示されているロジックは順番を変えて’if’文にしましょう！
 
- ## Your console should display the following:
+ ## 自分のコンソール画面に次のテキストが表示されていればOKです
 
      1
      2
@@ -138,3 +138,5 @@ for i in 1...100 {
      School
 
  */
+
+//: [Previous](@previous)

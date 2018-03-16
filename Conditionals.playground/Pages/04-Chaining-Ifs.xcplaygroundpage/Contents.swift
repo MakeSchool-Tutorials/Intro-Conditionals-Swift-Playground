@@ -1,45 +1,47 @@
 /*:
  ![Make School Banner](./swift_banner.png)
 
-# Chaining Conditionals
+# 条件式の変更
 
- Sometimes we will need to evaluate more than two independent conditionals and run different pieces of code for each of them. We could do this with `if then else` statements nested in other `if then else` statements, but Swift provides a shortcut for this -- `if else`
+ 独立した条件式を2つ以上評価し、それぞれ異なるコードを実行しなければならない時もあります。さっき学んだ`if then else`文を重ねることもできますが、Swiftには`if else`というショートカットがあります。
 
- The following nested `if then else`:
+ `if then else`文を重ねて使う方法：
 
      if conditional1 {
-        // runs if conditional1 is true
+        // 条件式1が「真」の場合にコードが実行される
      } else {
         if conditional2 {
-            // runs if conditional1 is false and conditional2 is true
+            // 条件式1が「偽」かつ条件式2が「真」の場合にコードが実行される
         } else {
-            // runs if both conditional1 and conditional2 are false
+            // 条件式1と条件式2が両方「偽」の場合にコードが実行される
         }
      }
 
- can be re-written as:
+ このようにも書けます:
 
      if conditional1 {
-         // runs if conditional1 is true
+         // 条件式1が「真」の場合にコードが実行される
      } else if conditional2 {
-         // runs if conditional1 is false and conditional2 is true
+         // 条件式1が「偽」かつ条件式2が「真」の場合にコードが実行される
      } else {
-         // runs if both conditional1 and conditional2 are false
+         // 条件式1と条件式2が両方「偽」の場合にコードが実行される
      }
 
- This saves us a few keystrokes _and_ makes it more clear what our logic is trying to do!
+ これで少しだけタイプ量が節約でき、ロジックの目的がより明確になります。
 
- # Panic braking!
+ # パニックブレーキ！
 
- What happens if the car in front of us brakes suddenly and hard? Our cruise control needs to support panic braking! Let's change up our logic a bit. This time we want to support two types of braking -- `brake()` and `brakeHard()`. Our logic should be able to survive this scenario without crashing! It should also get up to the speed limit in a reasonable amount of time.
+ 前の車が急ブレーキをかけたら大変です。私たちのクルーズ・コントロールはパニックブレーキにも対応しなければなりません。ロジックを少しだけ変えてみましょう。今回は2種類のブレーキ`brake(ブレーキ)` と `brakeHard(急ブレーキ)`に対応します。このようなシナリオにおいても衝突を避けられるようなロジックにしなければなりません。さらに、ブレーキ後に法定速度まで戻るのに時間をかけすぎても良くありません。
 
- - callout(Hint): Only brake if the distance between cars is reasonably close -- there is no reason to brake for a car a mile ahead slowing down! Use the difference between `previousDistance` and `distance` to decide how hard to brake. Accelerate only when under the speed limit and the distance between cars is increasing.
+ - callout(ヒント): 前の車との車間距離が大幅に縮んだ場合のみブレーキを発動しましょう。実際には1km先の車がスピードを落としたからと言ってすぐにブレーキを踏む必要はありません。`previousDistance` と `distance`の差分をみて必要となるブレーキの種類を判断しましょう。走行が法定速度より遅く、かつ車間距離が大きくなっている場合にだけ加速します。
 
 */
 func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
-    // Fix this to implement a basic adaptive cruise control
+     // ここを直してアダプティブ・クルーズ・コントロールを作りましょう
 
 }
+
+
 //: [Previous](@previous) | [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
