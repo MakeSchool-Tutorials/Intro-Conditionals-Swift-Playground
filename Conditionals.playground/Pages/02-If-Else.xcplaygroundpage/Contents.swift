@@ -21,8 +21,6 @@
 
  さっき書いたクルーズコントロールはどんな状況でも加速してしまうものでした。この例では、車は法定速度を守っていながらも衝突してしまいます。
 
- Now that we know about `else` statements, can you turn the _cruise control_ into an _adaptive cruise control_?
-
  - callout(チャレンジ): 次の`cruiseControl` 機能を直してみましょう! 今度は距離が50より近い場合には `brake(ブレーキ)`を、その他の場合は時速60kmに到達するまで `accelerate(加速)` をするように書き換えます。
 
  */
