@@ -8,7 +8,7 @@
  
  ## ブーリアン
  
- Swiftでは、ブーリアンは’Bool’というテキストで表します。’Bool’においては’true’と’false’の2つの値を使うことができます。次のブール演算子を使ってブール型の演算式を組み立てることができます。
+ Swiftでは、ブーリアンは’Bool’というキーワードで表します。’Bool’においては’true’と’false’の2つの値を使うことができます。次のブール演算子を使ってブール型の演算式を組み立てることができます。
  
  - `<` ～より小さい
  - `>` ～より大きい
@@ -66,7 +66,7 @@ if 0 > 1 {
  
  ‘cruiseControl’の機能は何秒かに1回、自動的に稼働します。このコードでは、青い車はどこまででも加速します。そして他の車に衝突してしまいます。
  
- - callout(Challenge): 次のコードを直してみましょう! 道路の法定速度は時速60km. 60kmまではスピードが出るが、60kmより速くはならないように設定しましょう！
+ - callout(チャレンジ): 次のコードを直してみましょう! 道路の法定速度は時速60km. 60kmまではスピードが出るが、60kmより速くはならないように設定しましょう！
  
  */
 func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
@@ -76,7 +76,7 @@ func cruiseControl(currentSpeed: Int, distance: Int, previousDistance: Int) {
 }
 /*:
  
- - callout(Hint): `accelerate`と言うたびに時速1kmずつ加速します。でも `accelerate`を発動できるのは `cruiseControl` が自動的に稼働した時に1回だけです。
+ - callout(ヒント): `accelerate`と言うたびに時速1kmずつ加速します。でも `accelerate`を発動できるのは `cruiseControl` が自動的に稼働した時に1回だけです。
  
     `distance`と `previousDistance` は今は使いません！後のセクションで使います。
 

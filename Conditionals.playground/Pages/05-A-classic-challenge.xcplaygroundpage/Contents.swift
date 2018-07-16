@@ -2,7 +2,7 @@
  ![Make School Banner](./swift_banner.png)
  # Fizz Buzz
 
- 子どもに割り算を教える[Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz)とういうゲームがあります。 ルールはいたって簡単です:
+ 子どもに割り算を教える[Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz)というゲームがあります。 ルールはいたって簡単です:
 
  - callout(Fizz Buzzのルール): 1から100まで数えるなかで...
 
