@@ -2,7 +2,7 @@
  ![Make School Banner](./swift_banner.png)
  # Fizz Buzz
 
- 子どもに割り算を教える[Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz)というゲームがあります。 ルールはいたって簡単です:
+ 子どもに割り算を教える[Fizz Buzz](https://ja.wikipedia.org/wiki/Fizz_Buzz)というゲームがあります。 ルールはいたって簡単です:
 
  - callout(Fizz Buzzのルール): 1から100まで数えるなかで...
 
@@ -15,7 +15,7 @@
 
  ## Make School: FizzBuzzの代わりに
 
- _Fizz_と_Buzz_の代わりに、それぞれ_Make_と_School_を使います。
+ _Fizz_ と _Buzz_ の代わりに、それぞれ _Make_ と _School_ を使います。
 
   - callout(チャレンジ): 次の`for`ループを修正して...
 
@@ -32,7 +32,7 @@ for i in 1...100 {
 
 /*:
 
-  - callout(ヒント):ルールに示されているロジックは順番を変えて’if’文にしましょう！
+  - callout(ヒント):ルールに示されているロジックは順番を変えて`if`文にしましょう！
 
  ## 自分のコンソール画面に次のテキストが表示されていればOKです
 
